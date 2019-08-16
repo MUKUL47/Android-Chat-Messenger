@@ -1,0 +1,37 @@
+<html>            
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>  
+
+    <body>
+            <center>
+                    <br/><br/><br/><br/>
+                    <div class="ui input" style="width : 25.75%">
+                            <input type="text" id = "yourName" placeholder="Your name">
+                    </div>
+                    <br/>
+                    <div class="ui input" style="width : 25.75%">
+                            <input type="text" id = "friendName" placeholder="Your friend name">
+                    </div>              
+                    <br/>                                        
+                    <div class="ui input" style="width : 25.75%">
+                            <input type="text" id = "message" placeholder="Enter message" value = "">
+                    </div>           
+                    <br/>
+                    <button class="ui primary button"  style="width : 25.75%" id ="send">
+                        SEND
+                    </button>
+                    <b><h3 id="typing"></h3> </b>         
+                    <br/>
+                    <h1 id="m"></h1>
+            </center>
+    </body>
+    <script src="./chat.js"></script>
+
+    
+</html>
