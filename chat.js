@@ -1,4 +1,4 @@
-var socket = io("http://localhost:1000");
+var socket = io("http://localhost:4201");
 let user = "",
   friend = ""
 
@@ -17,19 +17,22 @@ socket.on('isTyping', (msg)=>{
 });
 
 $("#send").click(()=>{
-    let m = $("#message").val().trim(),
+    console.log('')
+     
+    let m = `${$("#message").val().trim()}`,
     f = $("#friendName").val().trim(),
-    u = $("#yourName").val().trim()
+    u = $("#yourName").val().trim();
+    $("#message").val('')
     if( m.length > 0 && 
         f.length > 0 && 
         u.length > 0 &&
         u !== f       
-        ){
+        ){    
         socket.emit('sendMessage', {
             user : u,
             friend : f,
             message : m
-        });        
+        });   
     }
 })
 
